@@ -12,14 +12,11 @@
 
 #### Skills:
 
->* CSS3
->* HTML5
->* Javascript (ES6)
+>* HTML5, CSS3
+>* Javascript (ES6), React
+>* Adaptive Layout, Pixel-perfect
 >* Git
 >* Figma, Photoshop to work with the layout
->* React
->* Adaptive Layout
->* Pixel-perfect
 >* Unit testing
 
 ---
@@ -39,8 +36,6 @@ function multiples(n) {
   console.log(res || i)
   }
 }
-
-multiples(30)
 ```
 
 * [Landing page: Day X](https://day-x.vercel.app)
