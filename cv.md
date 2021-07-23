@@ -44,7 +44,7 @@ function multiples(n) {
 
 ---
 
-#### Working experience
+#### Working experience:
 
 March 2021 - until now <br>
 **WebHeroSchool** - Mentor
@@ -64,7 +64,7 @@ August 2003 - August 2011 <br>
 
 ---
 
-#### Education
+#### Education:
 
 [2020] [WebHeroSchool](https://lk.webheroschool.ru/pl/41813381), "Frontend"
 
