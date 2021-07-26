@@ -1,0 +1,118 @@
+body {
+  padding-top: 20px;
+  font-family: Helvetica, sans-serif;
+  background:
+          linear-gradient(45deg, #92baac 45px, transparent 45px) 64px 64px,
+          linear-gradient(45deg, #92baac 45px, transparent 45px, transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+          linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px, #92baac 68px, #92baac 113px, transparent 113px, transparent 158px, #92baac 158px);
+  background-color:#e1ebbd;
+  background-size: 128px 128px;
+}
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+header, .main, footer {
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+}
+
+header, footer {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+header img {
+  margin-right: 40px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.header__wrap {
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0 0 15px;
+  font-size: 28px;
+  line-height: 28px;
+  color: #841d29;
+}
+
+h2 {
+  margin: 0 0 15px;
+  font-size: 20px;
+  font-style: italic;
+  color: #383838;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 100%;
+  color: #0e1338;
+}
+
+a {
+  color: #383838;
+}
+
+.header__wrap h3 {
+  display: inline-block;
+  margin: 8px 0;
+}
+
+header ul {
+  margin-bottom: 0;
+}
+
+header li {
+  font-style: italic;
+  color: #383838;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+header li:hover {
+  color: #283593;
+}
+
+section {
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+section:last-child {
+  margin-bottom: 0;
+  /*padding-bottom: 0;*/
+  /*border-bottom: none;*/
+}
+
+section h3 {
+  text-align: center;
+  color: #841d29;
+}
+
+p i {
+  color: #0e1338;
+  text-decoration: underline;
+}
+
+footer {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+time {
+  font-size: 20px;
+  font-weight: bold;
+}
