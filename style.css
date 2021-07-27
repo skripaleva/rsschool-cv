@@ -70,6 +70,10 @@ a {
   margin: 8px 0;
 }
 
+summary {
+  cursor: pointer;
+}
+
 header ul {
   margin-bottom: 0;
 }
@@ -93,8 +97,6 @@ section {
 
 section:last-child {
   margin-bottom: 0;
-  /*padding-bottom: 0;*/
-  /*border-bottom: none;*/
 }
 
 section h3 {
