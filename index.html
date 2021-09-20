@@ -5,17 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
+  <header class = "header">
+    <input type="checkbox" name="mobile_nav_trigger" id="mobile_nav_trigger" class="mobile_nav_trigger">
+    <div class="container">
+      <div class="logo">ES</div>
+      <nav>
+        <ul class="header__nav">
+          <li class="nav__item"><a href="#examples">Code examples</a></li>
+          <li class="nav__item"><a href="#skills">Skills</a></li>
+          <li class="nav__item"><a href="#experience">Working experience</a></li>
+          <li class="nav__item"><a href="#education">Education</a></li>
+        </ul>
+      </nav>
+      <label for="mobile_nav_trigger" onclick>
+        <div class="header__menu-btn">
+          <div class="burger__wrap">
+            <span class="header__burger"></span>
+          </div>
+        </div>
+      </label>
+    </div>
+  </header>
     <main>
       <header>
-        <img src="images/ava.jpg" alt="Photo" width="235" height="235">
+        <img class="avatar" src="images/ava.jpg" alt="Photo" width="235" height="235">
         <div class="header__wrap">
           <h1>Evgeniya Skripaleva</h1>
           <h2>Junior Frontend Developer</h2>
-          <details>
-            <summary><h3>Contacts</h3></summary>
+          <details open>
+            <summary><h3 id="contacts">Contacts</h3></summary>
             <ul>
               <li>City: Moscow</li>
               <li><a href="https://t.me/ESkripaleva" target="_blank">Telegram</a></li>
@@ -28,15 +56,27 @@
       </header>
       <div class="main">
         <section>
-          <h3>Code examples:</h3>
+          <h3 id="examples">Code examples:</h3>
           <ul>
             <li><mark><a href="https://day-x.vercel.app" target="_blank">Landing page: Day X</a></mark> (<a href="https://github.com/skripaleva/day_x" target="_blank">look at the Github</a>) - HTML&CSS</li>
             <li><mark><a href="https://webheroschool.github.io/js_new_es/" target="_blank">Game: Who want to be a millionaire</a></mark> (<a href="https://github.com/skripaleva/js_new_es" target="_blank">look at the Github</a>) - Javascript</li>
             <li><mark><a href="https://skripaleva.ru/todo" target="_blank">Application: todo</a></mark> (<a href="https://github.com/skripaleva/todo_es" target="_blank">look at the Github</a>) - React</li>
           </ul>
+          <pre><code>function multiples(n) {
+            for (let i = 1; i <= n; i++) {
+            let res = '';
+            if (i % 3 === 0) {
+            res += 'fizz'
+            }
+            if (i % 5 === 0) {
+            res += 'buzz'
+            }
+            console.log(res || i)
+            }
+          } </code></pre>
         </section>
         <section>
-          <h3>Skills:</h3>
+          <h3 id="skills">Skills:</h3>
           <ul>
             <li>HTML5, CSS3</li>
             <li>Javascript (ES6), React</li>
@@ -47,15 +87,15 @@
           </ul>
         </section>
         <section>
-          <h3>Working experience:</h3>
+          <h3 id="experience">Working experience:</h3>
           <p><i>March 2021 - until now:</i> <strong>WebHeroSchool</strong> - Mentor <p>
           <p><i>August 2020 - until now:</i> <strong>Freelance</strong></p>
           <p><i>March 2020 - July 2020:</i> <strong>Craft IT</strong> - Junior Frontend Developer</p>
-          <p><i>August 2011 - December 2015:</i> <strong>Rostelecom</strong> - Engineer of telecommunications</p>
+          <p><i>August 2011 - December 2018:</i> <strong>Rostelecom</strong> - Engineer of telecommunications</p>
           <p><i>August 2003 - August 2011:</i> <strong>OOO "STC"</strong> - Specialist of telecommunications</p>
         </section>
         <section>
-          <h3>Education:</h3>
+          <h3 id="education">Education:</h3>
           <p><i>2020:</i> <a href="https://lk.webheroschool.ru/pl/41813381">Webheroschool</a>, "Frontend"</p>
           <p><i>2003 - 2009:</i> Rostov State Transport University, "Automation, telemechanics, communication"</p>
           <p><i>1999 - 2003:</i> Rostov-on-Don College of Communications and Informatics, "Networks of communication and systems of commutation"</p>
@@ -67,9 +107,13 @@
         </section>
       </div>
       <footer>
-        <a href="https://github.com/skripaleva" target="_blank"><img src="images/github-sign.png" alt="Github icon" width="40" height="40"></a>
+        <a href="https://github.com/skripaleva" target="_blank">
+          <img class="git-logo" src="images/github-sign.png" alt="Github icon" width="40" height="40">
+        </a>
         <time datetime="2021-07-27">2021 ©</time>
-        <a href="https://rs.school/js/" target="_blank"><img src="images/rss.svg" alt="School logo" height="35"></a>
+        <a href="https://rs.school/js/" target="_blank">
+          <img src="images/rss.svg" alt="School logo" height="35">
+        </a>
       </footer>
     </main>
   </body>
