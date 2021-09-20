@@ -78,7 +78,6 @@ header nav {
   font-weight: 500;
 }
 
-
 main {
   max-width: 860px;
   margin: 0 auto;
@@ -187,6 +186,11 @@ section h3 {
 
 mark {
   background-color: #ffffce;
+}
+
+code {
+  margin-left: 40px;
+  max-width: 400px;
 }
 
 p i {
@@ -414,5 +418,9 @@ time {
 
   h1, .header__wrap h2 {
     text-align: center;
+  }
+
+  code {
+    margin-left: 20px;
   }
 }
