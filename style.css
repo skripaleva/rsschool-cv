@@ -296,6 +296,7 @@ time {
 
   .header__menu-btn {
     position: relative;
+    display: inline-block;
     width: 25px;
     padding: 8px 0;
     color: transparent;
