@@ -151,7 +151,6 @@ h3#contacts:hover {
   opacity: 0.8;
 }
 
-
 a {
   color: #383838;
 }
@@ -217,9 +216,30 @@ mark:hover {
   background-color: transparent;
 }
 
+.code-examples {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+.code-examples li {
+  list-style: none;
+  flex-basis: 200px;
+}
+
+figure {
+  margin: 20px;
+}
+
+pre {
+  display: flex;
+  justify-content: center;
+}
+
 code {
-  margin-left: 40px;
   max-width: 400px;
+  text-align: start;
 }
 
 p i {
@@ -259,6 +279,10 @@ time {
 
   section:last-child {
     border-bottom: none;
+  }
+
+  figure {
+    margin: 10px;
   }
 
   footer {
