@@ -76,6 +76,12 @@ header nav {
   text-decoration: none;
   color: #013766;
   font-weight: 500;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.nav__item a:hover {
+  opacity: 0.8;
 }
 
 main {
@@ -137,7 +143,14 @@ h3 {
 
 h3#contacts {
   color: #013766;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
 }
+
+h3#contacts:hover {
+  opacity: 0.8;
+}
+
 
 a {
   color: #383838;
@@ -157,14 +170,16 @@ header ul {
   margin-top: 5px;
 }
 
-header li {
+header li, a {
   font-style: italic;
   color: #383838;
-  -webkit-transition: color .5s;
-  transition: color .5s;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+  cursor: pointer;
 }
 
-header li:hover {
+
+header li:hover, a:hover {
   color: #283593;
 }
 
