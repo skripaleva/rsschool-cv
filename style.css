@@ -183,6 +183,15 @@ header li:hover, a:hover {
   color: #283593;
 }
 
+a svg path {
+  transition: fill .3s;
+  cursor: pointer;
+}
+a:hover svg path {
+  fill: #283593;
+}
+
+
 section {
   margin-bottom: 35px;
   padding-bottom: 25px;
@@ -201,6 +210,11 @@ section h3 {
 
 mark {
   background-color: #ffffce;
+  transition: background-color 0.8s;
+}
+
+mark:hover {
+  background-color: transparent;
 }
 
 code {
@@ -289,7 +303,7 @@ time {
     margin-right: 20px;
   }
 
-  footer img {
+  footer svg {
     width: auto;
     height: 25px;
   }
