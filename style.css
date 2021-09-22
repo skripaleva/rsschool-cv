@@ -207,6 +207,10 @@ section h3 {
   color: #841d29;
 }
 
+.about p {
+  text-indent: 25px;
+}
+
 mark {
   background-color: #ffffce;
   transition: background-color 0.8s;
