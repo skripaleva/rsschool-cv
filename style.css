@@ -216,7 +216,7 @@ section h3 {
 }
 
 mark {
-  background-color: #ffffce;
+  background-color: #E6EBED;
   transition: background-color 0.8s;
 }
 
@@ -281,6 +281,7 @@ time {
   position: absolute;
   width: 30px;
   top: 180px;
+  cursor: pointer;
 }
 
 .slider__prev {
@@ -300,7 +301,7 @@ time {
   bottom: 5vh;
   right: calc(50vw - 410px);
   opacity: 0.5;
-  background-color: #013766;
+  background-color: #404348;
   border-radius: 2px;
   padding: 2px 4px;
   box-sizing: border-box;
@@ -380,10 +381,6 @@ time {
   figure {
     margin: 10px;
   }
-
-  /*.scrollUp {*/
-  /*  display: block;*/
-  /*}*/
 }
 
 @media (max-width: 500px) {
@@ -431,7 +428,6 @@ time {
     position: fixed;
     right: 15px;
     background: #dbdad6;
-    /*padding: 5px;*/
     z-index: 10;
   }
 

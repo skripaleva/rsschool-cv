@@ -3,7 +3,6 @@ let burger = document.querySelector('.header__menu-btn');
 let burgerIcon = burger.querySelector('.header__burger');
 let links = document.querySelectorAll('.nav__item');
 let scrollUp = document.querySelector('.scrollUp');
-console.log(scrollUp)
 
 burger.addEventListener('click', () => {
   burgerIcon.classList.toggle('active');
@@ -59,11 +58,9 @@ function trackScroll() {
 
   if (scrolled > coords) {
     scrollUp.style.display = 'block';
-    console.log('>')
   }
   if (scrolled < coords) {
     scrollUp.style.display = 'none';
-    console.log('<')
   }
 }
 
