@@ -14,6 +14,12 @@ body {
           linear-gradient(-45deg, transparent 8%, #E6EBED 10%, transparent 10%, transparent 35%, #E6EBED 37%, transparent 33%);
 }
 
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
 strong {
   font-weight: 500;
 }
@@ -177,7 +183,6 @@ header li, a {
   cursor: pointer;
 }
 
-
 header li:hover, a:hover {
   color: #283593;
 }
@@ -189,7 +194,6 @@ a svg path {
 a:hover svg path {
   fill: #283593;
 }
-
 
 section {
   margin-bottom: 35px;
@@ -224,16 +228,25 @@ mark:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 20px;
+  margin: 0 30px 20px;
   padding-left: 0;
 }
+
 .code-examples li {
   list-style: none;
-  flex-basis: 200px;
+  /*flex-basis: 200px;*/
 }
 
 figure {
-  margin: 20px;
+  width: 200px;
+  margin: 10px 15px;
+  box-shadow: 0 4px 4px rgba(141, 141, 141, 0.25);
+  padding: 10px;
+  min-height: 260px;
+}
+
+.code-examples img {
+  margin-bottom: 13px;
 }
 
 pre {
@@ -261,6 +274,25 @@ time {
   font-weight: bold;
 }
 
+.examples {
+  position: relative;
+}
+
+.slider__button {
+  position: absolute;
+  width: 30px;
+  top: 170px;
+}
+
+.slider__prev {
+  left: -15px;
+}
+
+.slider__next {
+  transform: rotate(180deg);
+  right: -15px;
+}
+
 @media (max-width: 860px) {
   body {
     background: #404348;
@@ -283,6 +315,10 @@ time {
 
   section:last-child {
     border-bottom: none;
+  }
+
+  .code-examples {
+    margin: 0 20px 20px;
   }
 
   figure {
@@ -368,6 +404,7 @@ time {
     right: 10px;
     background: #dbdad6;
     padding: 5px;
+    z-index: 10;
   }
 
   .header__burger {
@@ -469,6 +506,10 @@ time {
   main {
     font-size: 12px;
   }
+
+  figure {
+    margin: 7px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -485,7 +526,25 @@ time {
     text-align: center;
   }
 
+  .code-examples {
+    margin: 0 10px 20px;
+  }
+
+  .slider__prev {
+    left: -20px;
+  }
+
+  .slider__next {
+    right: -20px;
+  }
+
   code {
     margin-left: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  figure {
+    margin: 10px;
   }
 }
