@@ -216,7 +216,7 @@ section h3 {
 }
 
 mark {
-  background-color: #ffffce;
+  background-color: #E6EBED;
   transition: background-color 0.8s;
 }
 
@@ -234,7 +234,6 @@ mark:hover {
 
 .code-examples li {
   list-style: none;
-  /*flex-basis: 200px;*/
 }
 
 figure {
@@ -281,7 +280,8 @@ time {
 .slider__button {
   position: absolute;
   width: 30px;
-  top: 170px;
+  top: 180px;
+  cursor: pointer;
 }
 
 .slider__prev {
@@ -291,6 +291,27 @@ time {
 .slider__next {
   transform: rotate(180deg);
   right: -15px;
+}
+
+.scrollUp {
+  display: none;
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  bottom: 5vh;
+  right: calc(50vw - 410px);
+  opacity: 0.5;
+  background-color: #404348;
+  border-radius: 2px;
+  padding: 2px 4px;
+  box-sizing: border-box;
+}
+
+.scrollUp img {
+  transform: rotate(90deg);
+  color: #FFFFFF;
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 860px) {
@@ -321,10 +342,12 @@ time {
     margin: 0 20px 20px;
   }
 
-
-
   footer {
     margin-bottom: 0;
+  }
+
+  .scrollUp {
+    right: 15px;
   }
 }
 
@@ -401,11 +424,10 @@ time {
     cursor: pointer;
   }
 
-  .container label {
+  .container .header__menu-btn {
     position: fixed;
-    right: 10px;
+    right: 15px;
     background: #dbdad6;
-    padding: 5px;
     z-index: 10;
   }
 
@@ -439,24 +461,11 @@ time {
 
   /* modal-menu */
 
-  .modal {
-    position: absolute;
-    display: none;
-    width: 100%;
-  }
-
-  .modal__close {
-    display: none;
-  }
   .burger__wrap {
     display: block;
   }
 
-  .mobile_nav_trigger:checked ~ .modal {
-    display: block;
-  }
-
-  .mobile_nav_trigger:checked + .container nav {
+  .container nav {
     position: absolute;
     top: 55px;
     left: 0;
@@ -464,29 +473,34 @@ time {
     padding-top: 30px;
     padding-bottom: 50px;
     background-color: #dbdad6;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .container nav.active {
     opacity: 0.95;
   }
 
-  .mobile_nav_trigger:checked + .container nav a {
+  .container nav a {
     font-size: 16px;
     line-height: 45px;
     text-decoration: underline;
   }
 
-  .mobile_nav_trigger:checked + .container nav .header__nav {
+  .container nav .header__nav {
     flex-direction: column;
   }
 
-  .mobile_nav_trigger:checked + .container label .header__burger {
+  .header__burger.active {
     top: 7px;
     transform: rotate(45deg);
   }
 
-  .mobile_nav_trigger:checked + .container label .header__burger::before {
+  .header__burger.active::before {
     bottom: 0;
   }
 
-  .mobile_nav_trigger:checked + .container label .header__burger::after {
+  .header__burger.active::after {
     transform: rotate(-90deg);
     top: 0;
   }
