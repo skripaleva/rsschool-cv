@@ -14,6 +14,12 @@ body {
           linear-gradient(-45deg, transparent 8%, #E6EBED 10%, transparent 10%, transparent 35%, #E6EBED 37%, transparent 33%);
 }
 
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
 strong {
   font-weight: 500;
 }
@@ -151,7 +157,6 @@ h3#contacts:hover {
   opacity: 0.8;
 }
 
-
 a {
   color: #383838;
 }
@@ -178,7 +183,6 @@ header li, a {
   cursor: pointer;
 }
 
-
 header li:hover, a:hover {
   color: #283593;
 }
@@ -190,7 +194,6 @@ a svg path {
 a:hover svg path {
   fill: #283593;
 }
-
 
 section {
   margin-bottom: 35px;
@@ -208,8 +211,12 @@ section h3 {
   color: #841d29;
 }
 
+.about p {
+  text-indent: 25px;
+}
+
 mark {
-  background-color: #ffffce;
+  background-color: #E6EBED;
   transition: background-color 0.8s;
 }
 
@@ -217,9 +224,38 @@ mark:hover {
   background-color: transparent;
 }
 
+.code-examples {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 30px 20px;
+  padding-left: 0;
+}
+
+.code-examples li {
+  list-style: none;
+}
+
+figure {
+  width: 200px;
+  margin: 10px 15px;
+  box-shadow: 0 4px 4px rgba(141, 141, 141, 0.25);
+  padding: 10px;
+  min-height: 260px;
+}
+
+.code-examples img {
+  margin-bottom: 13px;
+}
+
+pre {
+  display: flex;
+  justify-content: center;
+}
+
 code {
-  margin-left: 40px;
   max-width: 400px;
+  text-align: start;
 }
 
 p i {
@@ -235,6 +271,47 @@ footer {
 time {
   font-size: 20px;
   font-weight: bold;
+}
+
+.examples {
+  position: relative;
+}
+
+.slider__button {
+  position: absolute;
+  width: 30px;
+  top: 180px;
+  cursor: pointer;
+}
+
+.slider__prev {
+  left: -15px;
+}
+
+.slider__next {
+  transform: rotate(180deg);
+  right: -15px;
+}
+
+.scrollUp {
+  display: none;
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  bottom: 5vh;
+  right: calc(50vw - 410px);
+  opacity: 0.5;
+  background-color: #404348;
+  border-radius: 2px;
+  padding: 2px 4px;
+  box-sizing: border-box;
+}
+
+.scrollUp img {
+  transform: rotate(90deg);
+  color: #FFFFFF;
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 860px) {
@@ -261,8 +338,16 @@ time {
     border-bottom: none;
   }
 
+  .code-examples {
+    margin: 0 20px 20px;
+  }
+
   footer {
     margin-bottom: 0;
+  }
+
+  .scrollUp {
+    right: 15px;
   }
 }
 
@@ -291,6 +376,10 @@ time {
 
   main, .nav__item a {
     font-size: 14px;
+  }
+
+  figure {
+    margin: 10px;
   }
 }
 
@@ -335,6 +424,13 @@ time {
     cursor: pointer;
   }
 
+  .container .header__menu-btn {
+    position: fixed;
+    right: 15px;
+    background: #dbdad6;
+    z-index: 10;
+  }
+
   .header__burger {
     position: absolute;
     display: block;
@@ -365,24 +461,11 @@ time {
 
   /* modal-menu */
 
-  .modal {
-    position: absolute;
-    display: none;
-    width: 100%;
-  }
-
-  .modal__close {
-    display: none;
-  }
   .burger__wrap {
     display: block;
   }
 
-  .mobile_nav_trigger:checked ~ .modal {
-    display: block;
-  }
-
-  .mobile_nav_trigger:checked + .container nav {
+  .container nav {
     position: absolute;
     top: 55px;
     left: 0;
@@ -390,29 +473,34 @@ time {
     padding-top: 30px;
     padding-bottom: 50px;
     background-color: #dbdad6;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .container nav.active {
     opacity: 0.95;
   }
 
-  .mobile_nav_trigger:checked + .container nav a {
+  .container nav a {
     font-size: 16px;
     line-height: 45px;
     text-decoration: underline;
   }
 
-  .mobile_nav_trigger:checked + .container nav .header__nav {
+  .container nav .header__nav {
     flex-direction: column;
   }
 
-  .mobile_nav_trigger:checked + .container label .header__burger {
+  .header__burger.active {
     top: 7px;
     transform: rotate(45deg);
   }
 
-  .mobile_nav_trigger:checked + .container label .header__burger::before {
+  .header__burger.active::before {
     bottom: 0;
   }
 
-  .mobile_nav_trigger:checked + .container label .header__burger::after {
+  .header__burger.active::after {
     transform: rotate(-90deg);
     top: 0;
   }
@@ -434,6 +522,10 @@ time {
   main {
     font-size: 12px;
   }
+
+  figure {
+    margin: 7px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -450,7 +542,25 @@ time {
     text-align: center;
   }
 
+  .code-examples {
+    margin: 0 10px 20px;
+  }
+
+  .slider__prev {
+    left: -20px;
+  }
+
+  .slider__next {
+    right: -20px;
+  }
+
   code {
     margin-left: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  figure {
+    margin: 10px;
   }
 }
