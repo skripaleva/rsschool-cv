@@ -133,27 +133,27 @@ main h1 {
   margin: 0 0 10px;
 }
 
-h2 {
+h3 {
   margin: 0 0 10px;
   font-size: 20px;
   font-style: italic;
   color: #383838;
 }
 
-h3 {
+h2 {
   font-family: 'Lora', serif;
   font-size: 20px;
   line-height: 100%;
   color: #0e1338;
 }
 
-h3#contacts {
+h2#contacts {
   color: #013766;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
 }
 
-h3#contacts:hover {
+h2#contacts:hover {
   opacity: 0.8;
 }
 
@@ -161,7 +161,7 @@ a {
   color: #383838;
 }
 
-.header__wrap h3 {
+.header__wrap h2{
   display: inline-block;
   margin: 8px 0;
 }
@@ -206,7 +206,7 @@ section:last-child {
   margin-bottom: 0;
 }
 
-section h3 {
+section h2 {
   text-align: center;
   color: #841d29;
 }
@@ -228,7 +228,7 @@ mark:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 0 30px 20px;
+  margin: 0 30px 60px !important;
   padding-left: 0;
 }
 
@@ -538,7 +538,7 @@ time {
     margin-bottom: 15px;
   }
 
-  h1, .header__wrap h2 {
+  h1, .header__wrap h3 {
     text-align: center;
   }
 
