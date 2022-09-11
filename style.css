@@ -24,11 +24,11 @@ strong {
   font-weight: 500;
 }
 
-.mobile_nav_trigger {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
+/*.mobile_nav_trigger {*/
+/*  position: absolute;*/
+/*  top: -9999px;*/
+/*  left: -9999px;*/
+/*}*/
 
 .header .container {
   display: flex;
